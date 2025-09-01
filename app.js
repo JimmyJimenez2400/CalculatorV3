@@ -13,3 +13,27 @@ function multiply(a, b) {
 function divide(a, b) {
   return a / b;
 }
+
+function operate(a, operator, b) {
+  // this will grab the input for
+  switch (operator) {
+    case '+':
+      add(a, b);
+      break;
+    case '-':
+      subtract(a, b);
+      break;
+    case '*':
+      multiply(a, b);
+      break;
+    case '/':
+      divide(a, b);
+      break;
+    default:
+      console.log('Not available');
+  }
+}
+
+let first_input;
+let operator;
+let second_input;
