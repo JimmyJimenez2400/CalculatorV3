@@ -37,3 +37,22 @@ function operate(a, operator, b) {
 let first_input;
 let operator;
 let second_input;
+
+let displayValue = '';
+
+function populateDisplay(e) {
+  let buttonText = e.target.textContent;
+  console.log(buttonText);
+
+  displayValue += buttonText;
+  //now we'll update the display's element with 'display'
+  display.textContent = displayValue;
+}
+
+//DOM STUFF BELOW
+const display = document.querySelector('.display');
+const keyPadsForNumbers = document.querySelectorAll('.number');
+
+keyPadsForNumbers.forEach((button) => {
+  button.addEventListener('click', populateDisplay);
+});
